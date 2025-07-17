@@ -205,6 +205,10 @@
           background: white;
         }
 
+        #print-or-pdf-button {
+          display: none;
+        }
+
         .resume {
           box-shadow: none;
           max-width: none;
@@ -441,13 +445,14 @@
       }
 
       // Optional: Add a print button (uncomment if needed)
-      // document.addEventListener('DOMContentLoaded', function() {
-      //     const printBtn = document.createElement('button');
-      //     printBtn.textContent = 'Print/Save as PDF';
-      //     printBtn.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 1000; padding: 10px; background: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer;';
-      //     printBtn.onclick = printResume;
-      //     document.body.appendChild(printBtn);
-      // });
+       document.addEventListener('DOMContentLoaded', function() {
+           const printBtn = document.createElement('button');
+           printBtn.setAttribute('id', 'print-or-pdf-button');
+           printBtn.textContent = 'Print/Save as PDF';
+           printBtn.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 1000; padding: 10px; background: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer;';
+           printBtn.onclick = printResume;
+           document.body.appendChild(printBtn);
+       });
     </script>
   </body>
 </html>
